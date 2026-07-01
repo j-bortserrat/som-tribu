@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Servicios — Disciplinas, horarios y anuncios · Som Tribu</title>
+<meta name="description" content="Disciplinas, horario de clases y anuncios de Som Tribu, escuela de baile en Paiporta (Valencia): salsa, bachata, kizomba, urbano, ballet, flamenco, sevillanas, danza oriental y heels." />
+<link rel="icon" href="assets/logo.jpg" />
+<link rel="apple-touch-icon" href="assets/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="servicios">
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <a href="index.html" class="brand" aria-label="Som Tribu — Inicio">
+    <img src="assets/logo.jpg" alt="Logo de Som Tribu" width="46" height="46" />
+    <span class="brand-txt">
+      <span class="brand-mark">SOM <b>TRIBU</b></span>
+      <span class="brand-sub">Escuela de Baile · Paiporta</span>
+    </span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios.html" class="active">Servicios</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="resenas.html">Reseñas</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="nav-cta" href="https://appsomtribu.viday.es/inicio" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v3M16 3v3M9 14l2 2 4-4"/></svg>
+      <span class="cta-txt">Reserva tu plaza</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <span class="eyebrow">Servicios</span>
+  <h1>Bailes, horarios y <b>novedades</b></h1>
+  <p>Todo lo que ofrecemos en Som Tribu, organizado por categorías para que encuentres fácilmente lo que buscas.</p>
+</header>
+
+<!-- ===== SUB-NAV ===== -->
+<section class="sec" style="padding-bottom:2rem">
+  <div class="container">
+    <div class="serv-tabs reveal">
+      <button class="serv-tab" data-tab="disciplinas">Disciplinas</button>
+      <button class="serv-tab" data-tab="horarios">Horarios</button>
+      <button class="serv-tab" data-tab="precios">Precios</button>
+      <button class="serv-tab" data-tab="novedades">Novedades</button>
+    </div>
+
+    <!-- ============ DISCIPLINAS ============ -->
+    <div class="serv-cat" data-cat="disciplinas">
+      <div class="section-head reveal">
+        <span class="eyebrow">Disciplinas</span>
+        <h2>Nueve estilos, <b>una tribu</b></h2>
+        <div class="divider"></div>
+        <p>De los ritmos latinos al ballet clásico. Clases para niños, jóvenes y adultos, y para todos los niveles.</p>
+      </div>
+      <div class="disc-grid stagger">
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-salsa.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Salsa</h3>
+          <p>Salsa cubana y salsa en línea, además de rueda de casino para bailar en grupo con energía.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-bachata.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Bachata</h3>
+          <p>El baile de pareja más sensual y popular. Ritmo, conexión y musicalidad paso a paso.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-kizomba.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Kizomba</h3>
+          <p>Elegancia y cercanía en pareja. Descubre también el tarraxo, su vertiente más íntima.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-urbano.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Urbano</h3>
+          <p>Danza urbana con estilo y actitud para todas las edades, con grupo de competición.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-ballet.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Ballet</h3>
+          <p>La base de la danza clásica: técnica, postura y elegancia para infantil, junior y adultos.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-oriental.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Danza oriental</h3>
+          <p>Expresión, ritmo y movimiento de cadera. Una danza que conecta cuerpo y música.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-flamenco.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Flamenco</h3>
+          <p>Compás, braceo y taconeo. El arte flamenco desde la iniciación infantil a los niveles avanzados.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-sevillanas.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Sevillanas</h3>
+          <p>El baile por excelencia de las ferias. Aprende a bailarlas con soltura por niveles.</p>
+        </div>
+        <div class="disc-card">
+          <img class="disc-bg" src="assets/dfig-heels.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <h3>Heels</h3>
+          <p>Fuerza, sensualidad y actitud sobre tacones. Coreografías para brillar y ganar confianza.</p>
+        </div>
+      </div>
+      <p class="sched-note reveal">¿No sabes por dónde empezar? Escríbenos y te aconsejamos la clase ideal según tu nivel y tus gustos.</p>
+    </div>
+
+    <!-- ============ HORARIOS ============ -->
+    <div class="serv-cat" data-cat="horarios">
+      <div class="section-head reveal">
+        <span class="eyebrow">Horarios</span>
+        <h2>Horario de <b>septiembre</b></h2>
+        <div class="divider"></div>
+        <p>Clases de lunes a viernes en dos salas. El día de hoy aparece resaltado.</p>
+      </div>
+      <div class="sched-legend reveal">
+        <span><span class="dot dot-s1"></span> Sala 1</span>
+        <span><span class="dot dot-s2"></span> Sala 2</span>
+      </div>
+      <div class="week stagger">
+        <!-- LUNES -->
+        <div class="day-col" data-day="1">
+          <div class="day-head">Lunes<span class="today-badge">Hoy</span></div>
+          <div class="slots">
+            <div class="slot s1"><div class="time">17:30</div><div class="cls">Urbano Kids</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">18:30</div><div class="cls">Urbano Junior</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">19:30</div><div class="cls">Salsa Cubana</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">20:30</div><div class="cls">Rueda Casino</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">20:30</div><div class="cls">Bachata</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">21:30</div><div class="cls">Latin Ladies</div><div class="sala">Sala 1</div></div>
+          </div>
+        </div>
+        <!-- MARTES -->
+        <div class="day-col" data-day="2">
+          <div class="day-head">Martes<span class="today-badge">Hoy</span></div>
+          <div class="slots">
+            <div class="slot s1"><div class="time">17:30</div><div class="cls">Urbano Kids</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">17:30</div><div class="cls">Ballet Infantil</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">18:30</div><div class="cls">Urbano Junior</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">18:30</div><div class="cls">Ballet Junior</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">19:30</div><div class="cls">Salsa Línea</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">19:30</div><div class="cls">Ballet Adultos</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">20:30</div><div class="cls">Bachata</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">21:30</div><div class="cls">Kizomba</div><div class="sala">Sala 1</div></div>
+          </div>
+        </div>
+        <!-- MIÉRCOLES -->
+        <div class="day-col" data-day="3">
+          <div class="day-head">Miércoles<span class="today-badge">Hoy</span></div>
+          <div class="slots">
+            <div class="slot s1"><div class="time">17:30</div><div class="cls">Urbano Kids</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">17:30</div><div class="cls">Flamenco Infantil</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">18:30</div><div class="cls">Urbano Junior</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">18:30</div><div class="cls">Flamenco / Sevillanas 0</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">19:30</div><div class="cls">Bachata</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">19:30</div><div class="cls">Flamenco / Sevillanas 1</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">20:30</div><div class="cls">Danza Oriental</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">20:30</div><div class="cls">Kizomba · grupo cerrado</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">21:30</div><div class="cls">Heels</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">21:30</div><div class="cls">Tarraxo · grupo cerrado</div><div class="sala">Sala 2</div></div>
+          </div>
+        </div>
+        <!-- JUEVES -->
+        <div class="day-col" data-day="4">
+          <div class="day-head">Jueves<span class="today-badge">Hoy</span></div>
+          <div class="slots">
+            <div class="slot s1"><div class="time">17:30</div><div class="cls">Urbano Kids</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">18:30</div><div class="cls">Urbano Junior</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">19:30</div><div class="cls">Salsa Línea</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">19:30</div><div class="cls">Urbano Adultos</div><div class="sala">Sala 2</div></div>
+            <div class="slot s1"><div class="time">20:30</div><div class="cls">Kizomba</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">21:30</div><div class="cls">Bachata</div><div class="sala">Sala 1</div></div>
+          </div>
+        </div>
+        <!-- VIERNES -->
+        <div class="day-col" data-day="5">
+          <div class="day-head">Viernes<span class="today-badge">Hoy</span></div>
+          <div class="slots">
+            <div class="slot s1"><div class="time">17:30</div><div class="cls">Grupo Competición</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">18:30</div><div class="cls">Grupo Competición</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">19:30</div><div class="cls">Heels</div><div class="sala">Sala 1</div></div>
+            <div class="slot s1"><div class="time">20:30</div><div class="cls">Danza Oriental</div><div class="sala">Sala 1</div></div>
+            <div class="slot s2"><div class="time">20:30</div><div class="cls">Flamenco / Sevillanas 0</div><div class="sala">Sala 2</div></div>
+            <div class="slot s2"><div class="time">21:30</div><div class="cls">Flamenco / Sevillanas 1</div><div class="sala">Sala 2</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="sched-note reveal">Horario de septiembre · Sábados y domingos cerrado. Las plazas son limitadas: consúltanos disponibilidad por WhatsApp.</p>
+      <div style="text-align:center;margin-top:1.4rem" class="reveal">
+        <a class="btn btn-primary" href="https://wa.me/34613809519?text=Hola%2C%20quiero%20consultar%20disponibilidad%20de%20plazas%20en%20Som%20Tribu" target="_blank" rel="noopener"><span>Consultar plazas</span></a>
+      </div>
+    </div>
+
+    <!-- ============ PRECIOS ============ -->
+    <div class="serv-cat" data-cat="precios">
+      <div class="section-head reveal">
+        <span class="eyebrow">Bonos</span>
+        <h2>Baila a tu ritmo, <b>tú eliges cuándo</b></h2>
+        <div class="divider"></div>
+        <p>Bonos de clases personales e intransferibles, con dos meses de caducidad para que te organices como quieras.</p>
+      </div>
+      <div class="bonos stagger">
+        <div class="bono"><div class="b-classes">4</div><div class="b-label">Clases</div><div class="b-price">30&euro;</div></div>
+        <div class="bono"><div class="b-classes">8</div><div class="b-label">Clases</div><div class="b-price">50&euro;</div></div>
+        <div class="bono"><div class="b-classes">12</div><div class="b-label">Clases</div><div class="b-price">65&euro;</div></div>
+        <div class="bono"><div class="b-classes">16</div><div class="b-label">Clases</div><div class="b-price">75&euro;</div></div>
+        <div class="bono featured"><div class="b-classes">Todo</div><div class="b-label">Incluido</div><div class="b-price">99&euro;</div></div>
+      </div>
+      <div class="bono-meta reveal">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Personales e intransferibles</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Caducidad: 2 meses</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5L20 6"/></svg> Cancela hasta 5 h antes</span>
+      </div>
+    </div>
+
+    <!-- ============ NOVEDADES ============ -->
+    <div class="serv-cat" data-cat="novedades">
+      <div class="section-head reveal">
+        <span class="eyebrow">Novedades</span>
+        <h2>Anuncios y <b>eventos</b></h2>
+        <div class="divider"></div>
+        <p>Puertas abiertas, intensivos, castings y todo lo que se mueve en la tribu.</p>
+      </div>
+      <div class="anuncios stagger">
+        <div class="anuncio">
+          <div class="an-img"><img src="assets/anuncio-inauguracion.jpg" alt="Gran Inauguración de Som Tribu" loading="lazy" /></div>
+          <div class="an-body">
+            <span class="an-tag">Evento</span>
+            <h3>Gran Inauguración</h3>
+            <p>Ven, conócenos y siente la tribu. Inauguración e inicio de las puertas abiertas.</p>
+            <a class="an-cta" href="https://wa.me/34613809519?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20inauguraci%C3%B3n%20de%20Som%20Tribu" target="_blank" rel="noopener">Más información <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="anuncio">
+          <div class="an-img"><img src="assets/anuncio-puertas-abiertas.jpg" alt="Horario de la semana de puertas abiertas de Som Tribu, del 13 al 17 de julio" loading="lazy" /></div>
+          <div class="an-body">
+            <span class="an-tag">Evento</span>
+            <h3>Puertas abiertas</h3>
+            <p>Del 13 al 17 de julio, una semana para moverte y probar todas las clases. Consulta el horario y reserva tu plaza.</p>
+            <a class="an-cta" href="https://wa.me/34613809519?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20semana%20de%20puertas%20abiertas%20de%20Som%20Tribu" target="_blank" rel="noopener">Ver horario <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="anuncio">
+          <div class="an-img"><img src="assets/anuncio-puertas-1e.jpg" alt="Puertas abiertas de Som Tribu por 1 euro" loading="lazy" /></div>
+          <div class="an-body">
+            <span class="an-tag">Promoción</span>
+            <h3>Puertas abiertas · 1&euro;</h3>
+            <p>Un único pago de 1&euro; y accedes a todas las clases de la semana. Imprescindible reservar plaza.</p>
+            <a class="an-cta" href="https://wa.me/34613809519?text=Hola%2C%20quiero%20reservar%20plaza%20para%20las%20puertas%20abiertas%20de%20Som%20Tribu" target="_blank" rel="noopener">Reservar plaza <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="anuncio">
+          <div class="an-img"><img src="assets/anuncio-intensivos.jpg" alt="Intensivos de verano de Som Tribu" loading="lazy" /></div>
+          <div class="an-body">
+            <span class="an-tag">Verano</span>
+            <h3>Intensivos de verano</h3>
+            <p>Urbano, flamenco, sevillanas, SBK, danza oriental, heels y salsa cubana en formato intensivo.</p>
+            <a class="an-cta" href="https://wa.me/34613809519?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20intensivos%20de%20verano%20de%20Som%20Tribu" target="_blank" rel="noopener">Reservar plaza <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="anuncio">
+          <div class="an-img"><img src="assets/anuncio-casting.jpg" alt="Casting del grupo de competición urbano de Som Tribu" loading="lazy" /></div>
+          <div class="an-body">
+            <span class="an-tag">Competición</span>
+            <h3>Casting grupo urbano</h3>
+            <p>Si sientes la danza, esta es tu tribu. Casting para el grupo de competición urbano.</p>
+            <a class="an-cta" href="https://wa.me/34613809519?text=Hola%2C%20quiero%20apuntarme%20al%20casting%20del%20grupo%20de%20competici%C3%B3n%20urbano" target="_blank" rel="noopener">Apuntarme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="anuncio">
+          <div class="an-img"><img src="assets/anuncio-app.jpg" alt="App de Som Tribu" loading="lazy" /></div>
+          <div class="an-body">
+            <span class="an-tag">App</span>
+            <h3>Tenemos app</h3>
+            <p>Reserva 24/7, promociones, ficha de cliente y contenido exclusivo desde tu móvil.</p>
+            <a class="an-cta" href="https://wa.me/34613809519?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20app%20de%20Som%20Tribu" target="_blank" rel="noopener">Cómo descargarla <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="sec" style="padding-top:0">
+  <div class="container">
+    <div class="banner-cta reveal">
+      <h3>¿Reservamos tu <b>primera clase</b>?</h3>
+      <p>Cuéntanos qué te apetece bailar y tu nivel. Te ayudamos a elegir clase, horario y bono por WhatsApp.</p>
+      <div class="hero-buttons" style="margin-top:0">
+        <a class="btn btn-wa" href="https://wa.me/34613809519?text=Hola%2C%20me%20gustar%C3%ADa%20informarme%20sobre%20las%20clases%20de%20Som%20Tribu" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/></svg>
+          <span>Escríbenos por WhatsApp</span>
+        </a>
+        <a class="btn btn-ghost" href="galeria.html"><span>Ver galería</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="Som Tribu — Inicio">
+        <img src="assets/logo.jpg" alt="Logo de Som Tribu" width="46" height="46" />
+        <span class="brand-txt"><span class="brand-mark">SOM <b>TRIBU</b></span><span class="brand-sub">Escuela de Baile · Paiporta</span></span>
+      </a>
+      <p>Escuela de baile en Paiporta (Valencia). Vendrás por el baile, te quedarás por el ambiente.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/somtribu.paiporta" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://wa.me/34613809519" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explora</h4>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="galeria.html">Galería</a>
+      <a href="resenas.html">Reseñas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h4>Disciplinas</h4>
+      <a href="servicios.html#disciplinas">Salsa y bachata</a>
+      <a href="servicios.html#disciplinas">Kizomba</a>
+      <a href="servicios.html#disciplinas">Urbano y heels</a>
+      <a href="servicios.html#disciplinas">Ballet y flamenco</a>
+      <a href="servicios.html#disciplinas">Danza oriental</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>Carrer Marqués del Turia, 30<br>46200 Paiporta · Valencia</p>
+      <a href="tel:+34613809519">613 80 95 19</a>
+      <a href="https://www.instagram.com/somtribu.paiporta" target="_blank" rel="noopener">@somtribu.paiporta</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span class="year"></span> Som Tribu · Escuela de Baile · Paiporta (Valencia)</span>
+    <span>Diseño web por Wertical Studio</span>
+  </div>
+</footer>
+
+<!-- ===== FLOTANTES ===== -->
+<div class="status-banner" id="statusBanner" aria-live="polite"><span class="status-dot"></span><span class="st-label">…</span></div>
+<a class="wa-float" href="https://wa.me/34613809519?text=Hola%2C%20me%20gustar%C3%ADa%20informarme%20sobre%20las%20clases%20de%20Som%20Tribu" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zM12.04 20.15h-.003a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+</a>
+
+</body>
+</html>
