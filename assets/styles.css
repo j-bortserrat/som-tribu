@@ -620,7 +620,8 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 1020px) {
   .pillars { grid-template-columns: repeat(2, 1fr); }
-  .cards, .disc-grid { grid-template-columns: 1fr 1fr; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .disc-grid { grid-template-columns: repeat(3, 1fr); }
   .reviews-grid, .anuncios { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .bonos { grid-template-columns: repeat(3, 1fr); }
@@ -629,7 +630,6 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .split-media { aspect-ratio: 4/5; max-width: 400px; margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .gallery { grid-template-columns: repeat(3, 1fr); }
-  .week { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 860px) {
   nav { padding: 1rem 1.2rem; }
@@ -652,21 +652,44 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .nav-right { gap: .6rem; }
   .contact-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
-  .week { grid-template-columns: repeat(2, 1fr); }
+  .week {
+    display: flex; flex-wrap: nowrap; gap: .8rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity; padding: 4px 2px .7rem;
+  }
+  .day-col { flex: 0 0 auto; width: 172px; scroll-snap-align: start; }
 }
 @media (max-width: 620px) {
-  .sec { padding: 4rem 1.1rem; }
-  .pillars, .cards, .disc-grid, .stats, .anuncios, .bonos { grid-template-columns: 1fr; }
-  .week { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .sec { padding: 2.6rem 1rem; }
+  .section-head { margin-bottom: 1.9rem; }
+  .pillars, .cards, .stats, .anuncios { grid-template-columns: 1fr; }
+  /* Disciplinas: 3 en fila, compactas */
+  .disc-grid { grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+  .disc-card { padding: 1rem .5rem; }
+  .disc-card .disc-bg { width: 100%; max-width: 100%; height: 94px; margin-bottom: .5rem; }
+  .disc-card h3 { font-size: .76rem; margin-bottom: 0; }
+  .disc-card p { display: none; }
+  /* Precios: fila con scroll horizontal (como el horario) */
+  .bonos {
+    display: flex; flex-wrap: nowrap; gap: .7rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity; padding: 18px 2px .7rem;
+  }
+  .bono { flex: 0 0 auto; width: 128px; scroll-snap-align: start; }
+  /* Horario: días un pelín más estrechos en móvil */
+  .day-col { width: 158px; }
+  /* Barra de categorías compacta */
+  .serv-tabs { padding: .5rem .25rem; gap: .28rem; }
+  .serv-tab { padding: .46rem .62rem; font-size: .6rem; letter-spacing: .3px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.6rem; }
   .footer-bottom { flex-direction: column; }
   .hero-buttons { flex-direction: column; align-items: center; }
   .hero-buttons .btn { width: 280px; justify-content: center; }
-  .page-hero { padding: 9rem 1.1rem 3.5rem; }
-  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 175px; }
-  .rating-band { gap: 1.4rem; }
+  .page-hero { padding: 7.5rem 1rem 2.6rem; }
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 165px; }
+  .rating-band { gap: 1.4rem; padding: 1.4rem; }
   .rating-band .vsep { display: none; }
-  .map-wrap iframe { height: 280px; }
+  .map-wrap iframe { height: 260px; }
   .status-banner { left: 10px; bottom: 10px; padding: .42rem .72rem; font-size: .66rem; }
   .wa-float { right: 12px; bottom: 12px; width: 52px; height: 52px; }
   .wa-float svg { width: 29px; height: 29px; }
