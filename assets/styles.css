@@ -677,9 +677,10 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   nav.scrolled { padding: .7rem 1.2rem; }
   .nav-links {
     position: fixed; inset: 0 0 0 auto; width: 82%; max-width: 340px; height: 100vh; height: 100dvh;
-    flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.6rem;
-    padding: 2.5rem; right: -100%; background: var(--bg-850); border-left: 1px solid var(--line-dark);
+    flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.6rem;
+    padding: 6rem 2.5rem 2.5rem; right: -100%; background: var(--bg-850); border-left: 1px solid var(--line-dark);
     box-shadow: -12px 0 40px rgba(0,0,0,.6); transition: right .4s ease;
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
   }
   .nav-links.open { right: 0; }
   .nav-links a { font-size: 1.05rem; }
