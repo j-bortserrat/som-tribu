@@ -131,7 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (dd) {
         // "Servicios": en móvil el primer toque despliega las opciones (no navega)
         a.addEventListener('click', e => {
-          if (mqMobile.matches) { e.preventDefault(); dd.classList.toggle('open'); }
+          if (!mqMobile.matches) return;
+          e.preventDefault();
+          const opened = dd.classList.toggle('open');
+          // Al desplegar, asegurar que las 4 subcategorías queden a la vista
+          if (opened) setTimeout(() => {
+            const last = dd.querySelector('.dropdown a:last-child');
+            if (last) last.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          }, 360);
         });
       } else {
         a.addEventListener('click', closeMenu);
