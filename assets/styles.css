@@ -691,8 +691,10 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .has-dropdown > a { display: flex; align-items: center; width: 100%; }
   .nav-links .caret { display: inline-block; width: 16px; height: 16px; margin-left: auto; }
   .has-dropdown.open .caret { transform: rotate(180deg); }
-  .dropdown {
-    position: static; transform: none;
+  .dropdown,
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    position: static; transform: none; left: auto;
     opacity: 1; visibility: visible; pointer-events: auto;
     min-width: 0; background: none; border: 0; box-shadow: none;
     padding: 0; margin-top: 0; border-top: 0;
