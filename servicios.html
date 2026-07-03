@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Servicios — Disciplinas, horarios y anuncios · Som Tribu</title>
 <meta name="description" content="Disciplinas, horario de clases y anuncios de Som Tribu, escuela de baile en Paiporta (Valencia): salsa, bachata, kizomba, urbano, ballet, flamenco, sevillanas, danza oriental y heels." />
-<link rel="icon" href="assets/logo.jpg" />
-<link rel="apple-touch-icon" href="assets/logo.jpg" />
+<link rel="icon" href="assets/logo.png" />
+<link rel="apple-touch-icon" href="assets/logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
 <!-- ===== NAV ===== -->
 <nav id="nav">
   <a href="index.html" class="brand" aria-label="Som Tribu — Inicio">
-    <img src="assets/logo.jpg" alt="Logo de Som Tribu" width="46" height="46" />
+    <img src="assets/logo.png" alt="Logo de Som Tribu" width="46" height="46" />
     <span class="brand-txt">
       <span class="brand-mark">SOM <b>TRIBU</b></span>
       <span class="brand-sub">Escuela de Baile · Paiporta</span>
@@ -26,7 +26,15 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="servicios.html" class="active">Servicios</a></li>
+    <li class="has-dropdown">
+      <a href="servicios.html" class="active">Servicios <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <ul class="dropdown">
+        <li><a href="servicios.html#disciplinas">Disciplinas</a></li>
+        <li><a href="servicios.html#horarios">Horarios</a></li>
+        <li><a href="servicios.html#precios">Precios</a></li>
+        <li><a href="servicios.html#novedades">Novedades</a></li>
+      </ul>
+    </li>
     <li><a href="galeria.html">Galería</a></li>
     <li><a href="resenas.html">Reseñas</a></li>
     <li><a href="contacto.html">Contacto</a></li>
@@ -207,7 +215,7 @@
         <span class="eyebrow">Bonos</span>
         <h2>Baila a tu ritmo, <b>tú eliges cuándo</b></h2>
         <div class="divider"></div>
-        <p>Bonos de clases personales e intransferibles, con dos meses de caducidad para que te organices como quieras.</p>
+        <p>Bonos de clases personal e intransferible, con dos meses de caducidad para que te organices como quieras.</p>
       </div>
       <div class="bonos stagger">
         <div class="bono"><div class="b-classes">4</div><div class="b-label">Clases</div><div class="b-price">30&euro;</div></div>
@@ -217,7 +225,7 @@
         <div class="bono featured"><div class="b-classes">Todo</div><div class="b-label">Incluido</div><div class="b-price">99&euro;</div></div>
       </div>
       <div class="bono-meta reveal">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Personales e intransferibles</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Personal e intransferible</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Caducidad: 2 meses</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5L20 6"/></svg> Cancela hasta 5 h antes</span>
       </div>
@@ -313,7 +321,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="brand" aria-label="Som Tribu — Inicio">
-        <img src="assets/logo.jpg" alt="Logo de Som Tribu" width="46" height="46" />
+        <img src="assets/logo.png" alt="Logo de Som Tribu" width="46" height="46" />
         <span class="brand-txt"><span class="brand-mark">SOM <b>TRIBU</b></span><span class="brand-sub">Escuela de Baile · Paiporta</span></span>
       </a>
       <p>Escuela de baile en Paiporta (Valencia). Vendrás por el baile, te quedarás por el ambiente.</p>
@@ -346,7 +354,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© <span class="year"></span> Som Tribu · Escuela de Baile · Paiporta (Valencia)</span>
+    <span>© <span class="year"></span> Som Tribu · Escuela de Baile · Paiporta</span>
     <span>Diseño web por Wertical Studio</span>
   </div>
 </footer>

@@ -1,5 +1,5 @@
 /* ===========================================================
-   SOM TRIBU — Escuela de Baile · Paiporta (Valencia)
+   SOM TRIBU — Escuela de Baile · Paiporta
    Lógica compartida: nav móvil, estado abierto/cerrado,
    reveal, contadores, vídeo hero, galería y pestañas.
    =========================================================== */
@@ -137,25 +137,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.14 });
   document.querySelectorAll('.reveal, .reveal-l, .reveal-r, .stagger').forEach(el => io.observe(el));
 
-  // Pestañas (Servicios: Disciplinas / Horarios / Anuncios)
+  // Resaltar el día de hoy (horario y contacto)
+  const today = new Date().getDay();
+  document.querySelectorAll(`[data-day="${today}"]`).forEach(el => el.classList.add('today'));
+
+  // Pestañas (Servicios: Disciplinas / Horarios / Precios / Novedades)
   const tabs = Array.from(document.querySelectorAll('.serv-tab'));
   const cats = Array.from(document.querySelectorAll('.serv-cat'));
   if (tabs.length && cats.length) {
-    const select = key => {
+    const tabsBar = document.querySelector('.serv-tabs');
+    const week = document.querySelector('.week');
+    const centerToday = () => {
+      if (!week) return;
+      const cur = week.querySelector('.day-col.today');
+      if (!cur) return;
+      week.scrollLeft = Math.max(0, cur.offsetLeft - (week.clientWidth - cur.offsetWidth) / 2);
+    };
+    const select = (key, scroll) => {
       cats.forEach(c => c.classList.toggle('active', c.dataset.cat === key));
       tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === key));
+      if (key === 'horarios') centerToday();
+      if (scroll && tabsBar) {
+        const y = tabsBar.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     };
     tabs.forEach(t => t.addEventListener('click', () => {
       select(t.dataset.tab);
       history.replaceState(null, '', '#' + t.dataset.tab);
     }));
-    const hash = (location.hash || '').replace('#', '');
-    select(tabs.some(t => t.dataset.tab === hash) ? hash : tabs[0].dataset.tab);
+    const initial = (location.hash || '').replace('#', '');
+    select(tabs.some(t => t.dataset.tab === initial) ? initial : tabs[0].dataset.tab);
+    // Menú desplegable de "Servicios": si ya estamos en la página, cambia de pestaña
+    window.addEventListener('hashchange', () => {
+      const h = (location.hash || '').replace('#', '');
+      if (tabs.some(t => t.dataset.tab === h)) select(h, true);
+    });
   }
-
-  // Resaltar el día de hoy (horario y contacto)
-  const today = new Date().getDay();
-  document.querySelectorAll(`[data-day="${today}"]`).forEach(el => el.classList.add('today'));
 
   // Año en el footer
   document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());

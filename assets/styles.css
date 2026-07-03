@@ -1,5 +1,5 @@
 /* ===========================================================
-   SOM TRIBU — Escuela de Baile · Paiporta (Valencia)
+   SOM TRIBU — Escuela de Baile · Paiporta
    Sistema de diseño · Wertical Studio
    Paleta: negro + rosa #FF3399 + turquesa (neon)
    =========================================================== */
@@ -147,6 +147,47 @@ nav.scrolled {
 
 .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; padding: 6px; background: none; border: 0; }
 .burger span { width: 26px; height: 2px; background: var(--light); border-radius: 2px; transition: .3s; display: block; }
+
+/* ===== Submenú desplegable (Servicios) ===== */
+.has-dropdown { position: relative; }
+.nav-links .caret {
+  width: 11px; height: 11px; margin-left: 4px;
+  stroke: currentColor; stroke-width: 2.4; fill: none;
+  vertical-align: -1px; transition: transform .3s ease;
+}
+.has-dropdown:hover .caret,
+.has-dropdown:focus-within .caret { transform: rotate(180deg); }
+/* Puente invisible para no perder el hover al bajar al submenú */
+.has-dropdown::before {
+  content: ''; position: absolute; top: 100%; left: -12px; right: -12px; height: 18px;
+}
+.dropdown {
+  list-style: none;
+  position: absolute; top: calc(100% + 14px); left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 196px; padding: .5rem;
+  background: var(--bg-850);
+  border: 1px solid var(--line-dark);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .26s ease, transform .26s ease;
+  z-index: 1002;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.dropdown li { width: 100%; }
+.dropdown a {
+  display: block; padding: .62rem .85rem;
+  font-size: .68rem; letter-spacing: 1.3px;
+  color: var(--light-soft); border-radius: 9px;
+  white-space: nowrap;
+}
+.dropdown a::after { display: none !important; }
+.dropdown a:hover { background: var(--bg-700); color: var(--magenta-2); }
 
 /* ===================== BOTONES ===================== */
 .btn {
@@ -643,6 +684,19 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .nav-links.open { right: 0; }
   .nav-links a { font-size: 1.05rem; }
   .nav-links a::after { display: none; }
+  /* Submenú Servicios: siempre desplegado y sangrado dentro del menú móvil */
+  .has-dropdown { width: 100%; }
+  .has-dropdown::before { display: none; }
+  .nav-links .caret { display: none; }
+  .dropdown {
+    position: static; transform: none;
+    opacity: 1; visibility: visible; pointer-events: auto;
+    min-width: 0; background: none; border: 0; box-shadow: none;
+    padding: .95rem 0 0; margin-top: .95rem; border-top: 1px solid var(--line-dark);
+    display: flex; flex-direction: column; gap: 1.1rem;
+  }
+  .dropdown a { padding: 0 0 0 .9rem; font-size: .92rem; letter-spacing: 1px; border-left: 2px solid var(--line-dark); }
+  .dropdown a:hover { background: none; }
   .burger { display: flex; }
   .burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
   .burger.open span:nth-child(2) { opacity: 0; }
@@ -669,13 +723,10 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .disc-card .disc-bg { width: 100%; max-width: 100%; height: 94px; margin-bottom: .5rem; }
   .disc-card h3 { font-size: .76rem; margin-bottom: 0; }
   .disc-card p { display: none; }
-  /* Precios: fila con scroll horizontal (como el horario) */
-  .bonos {
-    display: flex; flex-wrap: nowrap; gap: .7rem;
-    overflow-x: auto; -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity; padding: 18px 2px .7rem;
-  }
-  .bono { flex: 0 0 auto; width: 128px; scroll-snap-align: start; }
+  /* Precios: cuadrícula de 2 columnas, sin scroll horizontal */
+  .bonos { display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+  .bono { padding: 1.3rem .6rem; }
+  .bono.featured { grid-column: 1 / -1; }
   /* Horario: días un pelín más estrechos en móvil */
   .day-col { width: 158px; }
   /* Barra de categorías compacta */

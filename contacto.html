@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contacto — Som Tribu · Escuela de Baile · Paiporta</title>
 <meta name="description" content="Dónde estamos y cómo contactar con Som Tribu, escuela de baile en Paiporta (Valencia). Carrer Marqués del Turia, 30. Teléfono y WhatsApp: 613 80 95 19." />
-<link rel="icon" href="assets/logo.jpg" />
-<link rel="apple-touch-icon" href="assets/logo.jpg" />
+<link rel="icon" href="assets/logo.png" />
+<link rel="apple-touch-icon" href="assets/logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
 <!-- ===== NAV ===== -->
 <nav id="nav">
   <a href="index.html" class="brand" aria-label="Som Tribu — Inicio">
-    <img src="assets/logo.jpg" alt="Logo de Som Tribu" width="46" height="46" />
+    <img src="assets/logo.png" alt="Logo de Som Tribu" width="46" height="46" />
     <span class="brand-txt">
       <span class="brand-mark">SOM <b>TRIBU</b></span>
       <span class="brand-sub">Escuela de Baile · Paiporta</span>
@@ -26,7 +26,15 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
+    <li class="has-dropdown">
+      <a href="servicios.html">Servicios <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+      <ul class="dropdown">
+        <li><a href="servicios.html#disciplinas">Disciplinas</a></li>
+        <li><a href="servicios.html#horarios">Horarios</a></li>
+        <li><a href="servicios.html#precios">Precios</a></li>
+        <li><a href="servicios.html#novedades">Novedades</a></li>
+      </ul>
+    </li>
     <li><a href="galeria.html">Galería</a></li>
     <li><a href="resenas.html">Reseñas</a></li>
     <li><a href="contacto.html" class="active">Contacto</a></li>
@@ -124,7 +132,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="brand" aria-label="Som Tribu — Inicio">
-        <img src="assets/logo.jpg" alt="Logo de Som Tribu" width="46" height="46" />
+        <img src="assets/logo.png" alt="Logo de Som Tribu" width="46" height="46" />
         <span class="brand-txt"><span class="brand-mark">SOM <b>TRIBU</b></span><span class="brand-sub">Escuela de Baile · Paiporta</span></span>
       </a>
       <p>Escuela de baile en Paiporta (Valencia). Vendrás por el baile, te quedarás por el ambiente.</p>
@@ -157,7 +165,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© <span class="year"></span> Som Tribu · Escuela de Baile · Paiporta (Valencia)</span>
+    <span>© <span class="year"></span> Som Tribu · Escuela de Baile · Paiporta</span>
     <span>Diseño web por Wertical Studio</span>
   </div>
 </footer>
