@@ -684,18 +684,27 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .nav-links.open { right: 0; }
   .nav-links a { font-size: 1.05rem; }
   .nav-links a::after { display: none; }
-  /* Submenú Servicios: siempre desplegado y sangrado dentro del menú móvil */
+  /* Submenú Servicios: plegado por defecto; se despliega al pulsar "Servicios" */
   .has-dropdown { width: 100%; }
   .has-dropdown::before { display: none; }
-  .nav-links .caret { display: none; }
+  .has-dropdown > a { display: flex; align-items: center; width: 100%; }
+  .nav-links .caret { display: inline-block; width: 16px; height: 16px; margin-left: auto; }
+  .has-dropdown.open .caret { transform: rotate(180deg); }
   .dropdown {
     position: static; transform: none;
     opacity: 1; visibility: visible; pointer-events: auto;
     min-width: 0; background: none; border: 0; box-shadow: none;
-    padding: .95rem 0 0; margin-top: .95rem; border-top: 1px solid var(--line-dark);
-    display: flex; flex-direction: column; gap: 1.1rem;
+    padding: 0; margin-top: 0; border-top: 0;
+    display: flex; flex-direction: column; gap: 0;
+    max-height: 0; overflow: hidden;
+    transition: max-height .35s ease, margin-top .3s ease, padding .3s ease, gap .3s ease;
   }
-  .dropdown a { padding: 0 0 0 .9rem; font-size: .92rem; letter-spacing: 1px; border-left: 2px solid var(--line-dark); }
+  .has-dropdown.open .dropdown {
+    max-height: 320px;
+    padding: 1.1rem 0 0; margin-top: 1.1rem; border-top: 1px solid var(--line-dark);
+    gap: 1.25rem;
+  }
+  .dropdown a { padding: 0 0 0 1rem; font-size: 1.06rem; letter-spacing: .5px; border-left: 2px solid var(--magenta-2); }
   .dropdown a:hover { background: none; }
   .burger { display: flex; }
   .burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
