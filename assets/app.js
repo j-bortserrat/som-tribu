@@ -114,36 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.getElementById('burger');
   const links = document.getElementById('navLinks');
   if (burger && links) {
-    const mqMobile = window.matchMedia('(max-width: 860px)');
-    const closeMenu = () => {
-      burger.classList.remove('open');
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-      links.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
-    };
+    const closeMenu = () => { burger.classList.remove('open'); links.classList.remove('open'); document.body.style.overflow = ''; };
     burger.addEventListener('click', () => {
       const open = burger.classList.toggle('open');
       links.classList.toggle('open', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
-    links.querySelectorAll('a').forEach(a => {
-      const dd = a.parentElement && a.parentElement.classList.contains('has-dropdown') ? a.parentElement : null;
-      if (dd) {
-        // "Servicios": en móvil el primer toque despliega las opciones (no navega)
-        a.addEventListener('click', e => {
-          if (!mqMobile.matches) return;
-          e.preventDefault();
-          const opened = dd.classList.toggle('open');
-          // Al desplegar, asegurar que las 4 subcategorías queden a la vista
-          if (opened) setTimeout(() => {
-            const last = dd.querySelector('.dropdown a:last-child');
-            if (last) last.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-          }, 360);
-        });
-      } else {
-        a.addEventListener('click', closeMenu);
-      }
-    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
   }
 
