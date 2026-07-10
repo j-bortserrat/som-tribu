@@ -16,7 +16,11 @@ const SCHEDULE = {
   5: [[1050, 1350]],    // Viernes
   6: []                 // Sábado — cerrado
 };
-const DAYNAMES = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+const LANG = document.documentElement.lang === 'en' ? 'en' : 'es';
+const DAYNAMES = {
+  es: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
+  en: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+};
 
 function fmtMin(m) {
   const h = Math.floor(m / 60), mm = m % 60;
@@ -36,11 +40,19 @@ function getStatus() {
 function updateStatus() {
   const st = getStatus();
   let cls, txt;
-  if (st.open) { cls = 'status-open'; txt = 'Abierto ahora · hasta las ' + fmtMin(st.until); }
+  if (LANG === 'en') {
+    if (st.open) { cls = 'status-open'; txt = 'Open now · until ' + fmtMin(st.until); }
+    else {
+      cls = 'status-closed';
+      if (st.nextTime !== undefined && st.sameDay) txt = 'Closed · opens today at ' + fmtMin(st.nextTime);
+      else if (st.nextTime !== undefined) txt = 'Closed · opens ' + DAYNAMES.en[st.nextDay] + ' at ' + fmtMin(st.nextTime);
+      else txt = 'Closed now';
+    }
+  } else if (st.open) { cls = 'status-open'; txt = 'Abierto ahora · hasta las ' + fmtMin(st.until); }
   else {
     cls = 'status-closed';
     if (st.nextTime !== undefined && st.sameDay) txt = 'Cerrado · abre hoy a las ' + fmtMin(st.nextTime);
-    else if (st.nextTime !== undefined) txt = 'Cerrado · abre el ' + DAYNAMES[st.nextDay] + ' a las ' + fmtMin(st.nextTime);
+    else if (st.nextTime !== undefined) txt = 'Cerrado · abre el ' + DAYNAMES.es[st.nextDay] + ' a las ' + fmtMin(st.nextTime);
     else txt = 'Cerrado ahora';
   }
   document.querySelectorAll('.status-banner').forEach(ind => {
@@ -185,4 +197,67 @@ document.addEventListener('DOMContentLoaded', () => {
   // Vídeo y galería
   initHeroVideo();
   initLightbox();
+
+  // Consentimiento de cookies
+  initCookieConsent();
 });
+
+/* ---------------------- COOKIES ---------------------- */
+function initCookieConsent() {
+  const KEY = 'somtribu_cookie_consent';
+  const banner = document.getElementById('cookieBanner');
+  const modal = document.getElementById('cookieModal');
+  const thirdPartyToggle = document.getElementById('cookieThirdParty');
+
+  const getConsent = () => {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  };
+
+  const applyConsent = (thirdParty) => {
+    document.querySelectorAll('[data-consent-map]').forEach(el => {
+      if (thirdParty) {
+        if (el.querySelector('iframe')) return;
+        const ifr = document.createElement('iframe');
+        ifr.src = el.dataset.mapSrc;
+        ifr.title = el.dataset.mapTitle || 'Mapa';
+        ifr.loading = 'lazy';
+        ifr.referrerPolicy = 'no-referrer-when-downgrade';
+        ifr.allowFullscreen = true;
+        el.innerHTML = '';
+        el.appendChild(ifr);
+      } else {
+        const txt = LANG === 'en'
+          ? 'View location on Google Maps<br>(enable third-party cookies to embed the map here)'
+          : 'Ver ubicación en Google Maps<br>(activa las cookies de terceros para incrustar el mapa aquí)';
+        el.innerHTML = '<a class="map-fallback" href="' + (el.dataset.mapLink || '#') + '" target="_blank" rel="noopener">' + txt + '</a>';
+      }
+    });
+  };
+
+  const setConsent = (thirdParty) => {
+    localStorage.setItem(KEY, JSON.stringify({ thirdParty: !!thirdParty, date: new Date().toISOString() }));
+    applyConsent(!!thirdParty);
+    banner?.classList.remove('show');
+    modal?.classList.remove('open');
+  };
+
+  const openModal = () => {
+    const c = getConsent();
+    if (thirdPartyToggle) thirdPartyToggle.checked = !!(c && c.thirdParty);
+    modal?.classList.add('open');
+  };
+
+  const consent = getConsent();
+  applyConsent(!!(consent && consent.thirdParty));
+  if (!consent && banner) {
+    setTimeout(() => banner.classList.add('show'), 500);
+  }
+
+  document.getElementById('cookieAccept')?.addEventListener('click', () => setConsent(true));
+  document.getElementById('cookieReject')?.addEventListener('click', () => setConsent(false));
+  document.getElementById('cookieSettings')?.addEventListener('click', openModal);
+  document.getElementById('cookieRejectAll2')?.addEventListener('click', () => setConsent(false));
+  document.getElementById('cookieSavePrefs')?.addEventListener('click', () => setConsent(thirdPartyToggle?.checked));
+  document.querySelectorAll('[data-cookie-settings]').forEach(btn => btn.addEventListener('click', e => { e.preventDefault(); openModal(); }));
+  modal?.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+}

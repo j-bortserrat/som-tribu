@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/index.html" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/servicios.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/servicios.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/galeria.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/galeria.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/galeria.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/resenas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/resenas.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/resenas.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/contacto.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/aviso-legal.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/aviso-legal.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/privacidad.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/privacidad.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/cookies.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/index.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/servicios.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/servicios.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.45</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/galeria.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/galeria.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/galeria.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/resenas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/resenas.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/resenas.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.35</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/contacto.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/aviso-legal.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/aviso-legal.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/privacidad.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/privacidad.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://j-bortserrat.github.io/som-tribu/en/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://j-bortserrat.github.io/som-tribu/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://j-bortserrat.github.io/som-tribu/en/cookies.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+</urlset>
