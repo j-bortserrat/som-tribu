@@ -443,8 +443,7 @@ section { position: relative; }
 .day-col.today .day-head { background: linear-gradient(135deg, var(--magenta-deep), var(--purple)); color: #fff; }
 .day-head .today-badge { display: none; font-size: .58rem; letter-spacing: 2px; color: var(--teal-2); margin-top: 3px; }
 .day-col.today .day-head .today-badge { display: block; color: #fff; opacity: .85; }
-.slots-cols { padding: .7rem; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; flex: 1; align-items: start; }
-.slots-col { display: flex; flex-direction: column; gap: .5rem; }
+.slots-cols { padding: .7rem; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem .6rem; flex: 1; }
 .col-label {
   font-size: .58rem; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 700;
   text-align: center; color: var(--light-faint); padding-bottom: .3rem; border-bottom: 1px solid var(--line-dark); margin-bottom: .15rem;
@@ -459,6 +458,7 @@ section { position: relative; }
 .slot.s2 { border-left-color: var(--teal); }
 .slot .time { font-size: .64rem; letter-spacing: 1px; color: var(--light-faint); font-weight: 600; }
 .slot .cls { font-size: .78rem; color: var(--light); font-weight: 600; margin-top: 1px; line-height: 1.25; }
+.slot-empty { visibility: hidden; }
 .sched-note { text-align: center; margin-top: 2.4rem; color: var(--light-faint); font-size: .86rem; }
 
 /* ===================== ANUNCIOS ===================== */
