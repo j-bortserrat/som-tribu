@@ -1,5 +1,5 @@
 /* ===========================================================
-   SOM TRIBU — Escuela de Baile · Paiporta
+   SOM TRIBU — Escuela de Baile Paiporta
    Lógica compartida: nav móvil, estado abierto/cerrado,
    reveal, contadores, vídeo hero, galería y pestañas.
    =========================================================== */
