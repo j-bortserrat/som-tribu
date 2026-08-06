@@ -5,16 +5,18 @@
    =========================================================== */
 
 /* ---------- HORARIO REAL (minutos desde medianoche) ----------
-   Clases de lunes a viernes, 17:30–22:30. Sábado y domingo cerrado.
-   17:30 = 1050 · 22:30 = 1350. Si cambia, edita SOLO este objeto.   */
+   Clases de lunes a viernes, 17:30–22:30, más mañanas lunes y
+   miércoles 10:30–12:30. Sábado y domingo cerrado.
+   10:30 = 630 · 12:30 = 750 · 17:30 = 1050 · 22:30 = 1350.
+   Si cambia, edita SOLO este objeto.   */
 const SCHEDULE = {
-  0: [],                // Domingo — cerrado
-  1: [[1050, 1350]],    // Lunes 17:30–22:30
-  2: [[1050, 1350]],    // Martes
-  3: [[1050, 1350]],    // Miércoles
-  4: [[1050, 1350]],    // Jueves
-  5: [[1050, 1350]],    // Viernes
-  6: []                 // Sábado — cerrado
+  0: [],                            // Domingo — cerrado
+  1: [[630, 750], [1050, 1350]],    // Lunes 10:30–12:30 y 17:30–22:30
+  2: [[1050, 1350]],                // Martes
+  3: [[630, 750], [1050, 1350]],    // Miércoles 10:30–12:30 y 17:30–22:30
+  4: [[1050, 1350]],                // Jueves
+  5: [[1050, 1350]],                // Viernes
+  6: []                              // Sábado — cerrado
 };
 const LANG = document.documentElement.lang === 'en' ? 'en' : 'es';
 const DAYNAMES = {

@@ -443,7 +443,11 @@ section { position: relative; }
 .day-col.today .day-head { background: linear-gradient(135deg, var(--magenta-deep), var(--purple)); color: #fff; }
 .day-head .today-badge { display: none; font-size: .58rem; letter-spacing: 2px; color: var(--teal-2); margin-top: 3px; }
 .day-col.today .day-head .today-badge { display: block; color: #fff; opacity: .85; }
-.slots-cols { padding: .7rem; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem .6rem; flex: 1; align-items: start; }
+.slots-cols {
+  padding: .7rem; display: grid; grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 4.3rem 4.3rem 4.3rem 4.3rem 5.25rem 7.2rem 5.25rem;
+  gap: .5rem .6rem; flex: 1; align-items: start;
+}
 .col-label {
   font-size: .58rem; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 700;
   text-align: center; color: var(--light-faint); padding-bottom: .3rem; border-bottom: 1px solid var(--line-dark); margin-bottom: .15rem;
@@ -460,6 +464,11 @@ section { position: relative; }
 .slot .cls { font-size: .78rem; color: var(--light); font-weight: 600; margin-top: 1px; line-height: 1.25; }
 .slot-empty { visibility: hidden; }
 .sched-note { text-align: center; margin-top: 2.4rem; color: var(--light-faint); font-size: .86rem; }
+
+.price-subhead { text-align: center; font-size: 1.3rem; color: var(--light); margin-bottom: 1.6rem; }
+.price-subhead b { color: var(--magenta-2); }
+.price-group { margin-bottom: 3.4rem; }
+.price-group:last-of-type { margin-bottom: 0; }
 
 /* ===================== ANUNCIOS ===================== */
 .anuncios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -482,6 +491,7 @@ section { position: relative; }
 
 /* ===================== BONOS / PRECIOS ===================== */
 .bonos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+.bonos.bonos-4 { grid-template-columns: repeat(4, 1fr); }
 .bono {
   background: var(--bg-850); border: 1px solid var(--line-dark); border-radius: var(--r);
   padding: 1.9rem 1.2rem; text-align: center; transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
@@ -775,7 +785,7 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .disc-grid { grid-template-columns: repeat(3, 1fr); }
   .reviews-grid, .anuncios { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .bonos { grid-template-columns: repeat(2, 1fr); }
+  .bonos, .bonos.bonos-4 { grid-template-columns: repeat(2, 1fr); }
   .bono.featured { grid-column: 1 / -1; }
   .split { grid-template-columns: 1fr; gap: 2.4rem; }
   .split.flip .split-media { order: 0; }
