@@ -395,8 +395,8 @@ section { position: relative; }
   position: relative; overflow: hidden;
 }
 .disc-card .disc-bg {
-  display: block; width: 100%; max-width: 178px; height: 190px; margin: 0 auto .8rem;
-  object-fit: contain; mix-blend-mode: screen;
+  display: block; width: 100%; max-width: 200px; height: 195px; margin: 0 auto .5rem;
+  object-fit: contain;
   transition: transform .5s ease;
 }
 .disc-card::before {
