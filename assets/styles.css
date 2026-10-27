@@ -428,7 +428,7 @@ section { position: relative; }
 .dot-s1 { background: var(--magenta); }
 .dot-s2 { background: var(--teal); }
 
-.week { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+.week { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .day-col {
   background: var(--bg-850); border: 1px solid var(--line-dark); border-radius: var(--r);
   overflow: hidden; display: flex; flex-direction: column;
@@ -445,7 +445,7 @@ section { position: relative; }
 .day-col.today .day-head .today-badge { visibility: visible; color: #fff; opacity: .85; }
 .slots-cols {
   padding: .7rem; display: grid; grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto repeat(7, 4.2rem);
+  grid-template-rows: auto 1.5rem repeat(2, 4.2rem) 1.5rem repeat(5, 4.2rem);
   gap: .4rem .5rem; flex: 0 0 auto; align-content: start; align-items: stretch;
 }
 .col-label {
@@ -465,6 +465,8 @@ section { position: relative; }
 .slot .time { font-size: .64rem; letter-spacing: 1px; color: var(--light-faint); font-weight: 600; }
 .slot .cls { font-size: .78rem; color: var(--light); font-weight: 600; margin-top: 2px; line-height: 1.2; }
 .slot-empty { visibility: hidden; }
+.sched-sep { grid-column: 1 / -1; display: flex; align-items: flex-end; font-size: .56rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--teal-2); border-bottom: 1px solid currentColor; padding-bottom: .25rem; }
+.sched-sep.sep-t { color: var(--magenta-2); }
 .sched-note { text-align: center; margin-top: 2.4rem; color: var(--light-faint); font-size: .86rem; }
 
 .price-subhead { text-align: center; font-size: 1.3rem; color: var(--light); margin-bottom: 1.6rem; }
