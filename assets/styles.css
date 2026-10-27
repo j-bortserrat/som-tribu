@@ -441,12 +441,12 @@ section { position: relative; }
   border-bottom: 1px solid var(--line-dark);
 }
 .day-col.today .day-head { background: linear-gradient(135deg, var(--magenta-deep), var(--purple)); color: #fff; }
-.day-head .today-badge { display: none; font-size: .58rem; letter-spacing: 2px; color: var(--teal-2); margin-top: 3px; }
-.day-col.today .day-head .today-badge { display: block; color: #fff; opacity: .85; }
+.day-head .today-badge { display: block; visibility: hidden; font-size: .58rem; letter-spacing: 2px; color: var(--teal-2); margin-top: 3px; }
+.day-col.today .day-head .today-badge { visibility: visible; color: #fff; opacity: .85; }
 .slots-cols {
   padding: .7rem; display: grid; grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 4.3rem 4.3rem 4.3rem 4.3rem 5.25rem 7.2rem 5.25rem;
-  gap: .5rem .6rem; flex: 1; align-items: start;
+  grid-template-rows: auto repeat(7, 4.6rem);
+  gap: .5rem .6rem; flex: 1; align-items: stretch;
 }
 .col-label {
   font-size: .58rem; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 700;
@@ -458,6 +458,7 @@ section { position: relative; }
   border: 1px solid var(--line-dark); border-radius: var(--r-sm);
   padding: .5rem .55rem; background: var(--bg-800);
   border-left: 3px solid var(--magenta);
+  min-width: 0; overflow: hidden; overflow-wrap: anywhere;
 }
 .slot.s2 { border-left-color: var(--teal); }
 .slot .time { font-size: .64rem; letter-spacing: 1px; color: var(--light-faint); font-weight: 600; }
@@ -828,15 +829,17 @@ footer { background: var(--bg-850); border-top: 1px solid var(--line-dark); padd
   .nav-links .lang-switch-item { display: block; margin-top: .4rem; padding-top: 1.4rem; border-top: 1px solid var(--line-dark); width: 100%; }
   .nav-links .lang-switch-item a { font-size: .8rem; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 700; color: var(--teal-2); }
 }
-@media (max-width: 860px) {
-  .contact-grid { grid-template-columns: 1fr; }
-  .reviews-grid { grid-template-columns: 1fr; }
+@media (max-width: 1100px) {
   .week {
     display: flex; flex-wrap: nowrap; gap: .8rem;
     overflow-x: auto; -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity; padding: 4px 2px .7rem;
   }
   .day-col { flex: 0 0 auto; width: 248px; scroll-snap-align: start; }
+}
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
   .sec { padding: 2.6rem 1rem; }
