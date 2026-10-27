@@ -445,8 +445,8 @@ section { position: relative; }
 .day-col.today .day-head .today-badge { visibility: visible; color: #fff; opacity: .85; }
 .slots-cols {
   padding: .7rem; display: grid; grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto repeat(7, 4.6rem);
-  gap: .5rem .6rem; flex: 1; align-items: stretch;
+  grid-template-rows: auto repeat(7, 4.2rem);
+  gap: .4rem .5rem; flex: 0 0 auto; align-content: start; align-items: stretch;
 }
 .col-label {
   font-size: .58rem; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 700;
@@ -459,10 +459,11 @@ section { position: relative; }
   padding: .5rem .55rem; background: var(--bg-800);
   border-left: 3px solid var(--magenta);
   min-width: 0; overflow: hidden; overflow-wrap: anywhere;
+  display: flex; flex-direction: column; justify-content: center; height: 100%; box-sizing: border-box;
 }
 .slot.s2 { border-left-color: var(--teal); }
 .slot .time { font-size: .64rem; letter-spacing: 1px; color: var(--light-faint); font-weight: 600; }
-.slot .cls { font-size: .78rem; color: var(--light); font-weight: 600; margin-top: 1px; line-height: 1.25; }
+.slot .cls { font-size: .78rem; color: var(--light); font-weight: 600; margin-top: 2px; line-height: 1.2; }
 .slot-empty { visibility: hidden; }
 .sched-note { text-align: center; margin-top: 2.4rem; color: var(--light-faint); font-size: .86rem; }
 
