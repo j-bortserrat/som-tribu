@@ -479,6 +479,8 @@ section { position: relative; }
   overflow: hidden; transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
   display: flex; flex-direction: column;
 }
+.anuncios.anuncios-solo { grid-template-columns: minmax(0, 380px); justify-content: center; }
+.anuncios.anuncios-solo .anuncio .an-img { aspect-ratio: 941 / 1672; }
 .anuncio:hover { transform: translateY(-7px); border-color: var(--magenta); box-shadow: var(--shadow); }
 .anuncio .an-img { aspect-ratio: 1 / 1; overflow: hidden; background: #000; }
 .anuncio .an-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
